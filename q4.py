@@ -27,7 +27,6 @@ class GenerateCurve:
         self.all_f1 = []
         self.all_precision = []
         self.all_recall = []
-        self.all_avg_precision = []
 
     def calculate_metrics(self, y_true, y_pred_proba):
         y_pred = (y_pred_proba[:, 1]).astype(int)
@@ -75,7 +74,6 @@ class GenerateCurve:
             self.all_f1.append(f1)
             self.all_precision.append(precision)
             self.all_recall.append(recall)
-            self.all_avg_precision.append(avg_precision)
 
             # store precision-recall curves for each fold
             self.all_precision_curve.append(precision_curve)
@@ -89,14 +87,12 @@ class GenerateCurve:
         avg_f1 = np.mean(self.all_f1)
         avg_precision = np.mean(self.all_precision)
         avg_recall = np.mean(self.all_recall)
-        avg_avg_precision = np.mean(self.all_avg_precision)
 
         print(f'Metrics for Data set {whichDataSet}:')
         print(f'Average Accuracy: {avg_accuracy:.4f}')
         print(f'Average F1-score: {avg_f1:.4f}')
         print(f'Average Precision: {avg_precision:.4f}')
         print(f'Average Recall: {avg_recall:.4f}')
-        print(f'Average Average Precision: {avg_avg_precision:.4f}')
 
         # set labels and title
         plt.xlabel('Recall')

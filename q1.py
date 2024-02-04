@@ -40,15 +40,6 @@ class DataDensityPlotter:
                     alpha = 0.2, # for transparency 
                     ax = axes[row, col],
                 )
-            sns.kdeplot(
-                data = self.dataB, 
-                x = column, 
-                hue = 'class', 
-                common_norm = False, 
-                fill = True,
-                alpha = 0.2, # for transparency 
-                ax = axes[row, col],
-            )
             axes[row, col].set_title(f'For {column} column')
             axes[row, col].set_xlabel(column)
             axes[row, col].set_ylabel('Density')
