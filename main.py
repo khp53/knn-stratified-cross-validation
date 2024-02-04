@@ -24,4 +24,4 @@ q1Obj.plotDensity('A')
 # the precision-recall curve for dataset B
 # uncomment the next line to get the precision-recall curve
 # **also line 18 should have to be uncommented**
-# q3Obj.getPrecisionRecallCurve('A')
+# q3Obj.getPrecisionRecallCurve('B')
