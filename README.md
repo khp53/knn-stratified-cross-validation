@@ -20,11 +20,16 @@ Is ML Suitable?
     ```bash
     git clone https://github.com/khp53/knn-stratified-cross-validation.git
     cd knn-stratified-cross-validation
+    code .
     ```
 
     or
 
     Unzip the file provided in brightspace
+    Open folder on terminal
+    ```bash
+    code .
+    ```
 
 
 3. **Install dependencies:**
